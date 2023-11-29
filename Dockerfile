@@ -34,6 +34,7 @@ COPY --chown=1000:0 pytorch    ${MODEL_DIR}/pytorch/
 COPY --chown=1000:0 sklearn    ${MODEL_DIR}/sklearn/
 COPY --chown=1000:0 tensorflow ${MODEL_DIR}/tensorflow/
 COPY --chown=1000:0 xgboost    ${MODEL_DIR}/xgboost/
+COPY --chown=1000:0 Llama-2-7b-chat-hf ${MODEL_DIR}/Llama-2-7b-chat-hf
 
 # some models are duplicated for testing and verification
 COPY --chown=1000:0 tensorflow/mnist ${MODEL_DIR}/tensorflow/mnist.savedmodel/
@@ -57,5 +58,6 @@ COPY --chown=1000:0 keras                    ${FVT_DIR}/tensorflow/keras-mnistne
 COPY --chown=1000:0 tensorflow/mnist         ${FVT_DIR}/tensorflow/mnist.savedmodel/
 COPY --chown=1000:0 tensorflow/mnist         ${FVT_DIR}/tensorflow/mnist-dup.savedmodel/
 COPY --chown=1000:0 fvt/pytorch/pytorch-mar  ${FVT_DIR}/pytorch/pytorch-mar-dup/
+COPY --chown=1000:0 Llama-2-7b-chat-hf        ${FVT_DIR}/pytorch/Llama-2-7b-chat-hf
 
 USER 1000
